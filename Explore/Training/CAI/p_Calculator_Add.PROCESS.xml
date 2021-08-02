@@ -13,10 +13,10 @@
       <types1:CreatedBy>tadirammohanreddy@Rammohanreddy.onmicrosoft.com</types1:CreatedBy>
       <types1:CreationDate>2021-08-02T07:16:00Z</types1:CreationDate>
       <types1:ModifiedBy>tadirammohanreddy@Rammohanreddy.onmicrosoft.com</types1:ModifiedBy>
-      <types1:ModificationDate>2021-08-02T07:18:57Z</types1:ModificationDate>
+      <types1:ModificationDate>2021-08-02T07:21:42Z</types1:ModificationDate>
       <types1:PublicationStatus>published</types1:PublicationStatus>
       <types1:PublishedBy>tadirammohanreddy@Rammohanreddy.onmicrosoft.com</types1:PublishedBy>
-      <types1:PublicationDate>2021-08-02T07:19:05Z</types1:PublicationDate>
+      <types1:PublicationDate>2021-08-02T07:21:47Z</types1:PublicationDate>
       <types1:PublishedContributionId>project:/spi.p_Calculator_Add/p_Calculator_Add.pd.xml</types1:PublishedContributionId>
       <types1:AutosaveExists>false</types1:AutosaveExists>
       <types1:Entry>
@@ -61,7 +61,7 @@
                   <link id="kpuuaikv" targetId="kpuuaiku"/>
                </start>
                <assignment id="kpuuaiku">
-                  <title>Add</title>
+                  <title>Add_logic</title>
                   <operation source="formula" to="output.Add">
                      <expression language="XQuery">sum( ($input.num1 , $input.Num2 ) )</expression>
                   </operation>
@@ -88,5 +88,5 @@
       <types1:GUID>aTyO2boJsE5jVALZ44VTM6</types1:GUID>
       <types1:DisplayName>p_Calculator_Add</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2021-08-02T07:19:38.529Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2021-08-02T07:22:07.177Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>
