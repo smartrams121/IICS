@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "aTyO2boJsE5jVALZ44VTM6",
+    "name" : "p_Calculator",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "HEJRxZsEi4tciSr-gt-22168589-2021-08-02T07:15:59.543Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

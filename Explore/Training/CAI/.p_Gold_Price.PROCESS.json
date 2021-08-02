@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "3LeNQb86KH4iauJKqEXuWk",
+    "name" : "p_Gold_Price",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "8bf3TzAnOjseGbc-gt-22783674-2021-08-02T07:15:59.54Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

@@ -1,0 +1,151 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>QVdoYsjqluQgabc-gt-22168621-2021-08-02T07:15:59.691Z::pd.xml</types1:EntryId>
+      <types1:Name>p_Addition</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>tadirammohanreddy@Rammohanreddy.onmicrosoft.com</types1:CreatedBy>
+      <types1:CreationDate>2021-08-02T07:16:00Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>tadirammohanreddy@Rammohanreddy.onmicrosoft.com</types1:PublishedBy>
+      <types1:PublicationDate>2021-08-02T07:16:05Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.p_Addition/p_Addition.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="p_Addition"
+                  name="p_Addition"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="in_Digit1" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="in_Digit2" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="in_check" type="boolean">
+                  <options>
+                     <option name="defaultvalue">false</option>
+                     <option name="boolean_show_as">checkbox</option>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="op_Results" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="op_text" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="op_int" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="op_date" type="date">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="op_Mul" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="op_sub" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="op_dvd" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="krkkcvpn" targetId="krkkcvpm"/>
+               </start>
+               <container id="krkkcvpm" type="exclusive">
+                  <title>in_check?</title>
+                  <flow id="krkkcvpq">
+                     <assignment id="krkkcvpz">
+                        <title>Calcilations</title>
+                        <operation source="constant" to="output.op_text">Please check the below Data</operation>
+                        <operation source="constant" to="output.op_date">2021-07-26</operation>
+                        <operation source="formula" to="output.op_Results">
+                           <expression language="XQuery">$input.in_Digit1 + $input.in_Digit2 </expression>
+                        </operation>
+                        <operation source="formula" to="output.op_Mul">
+                           <expression language="XQuery">$input.in_Digit1 * $input.in_Digit2 </expression>
+                        </operation>
+                        <operation source="formula" to="output.op_dvd">
+                           <expression language="XQuery">$input.in_Digit1 / $input.in_Digit2 </expression>
+                        </operation>
+                     </assignment>
+                     <link id="krkkcvpr" targetId="krkkcvpm" type="containerLink"/>
+                  </flow>
+                  <flow id="krkkcvpt">
+                     <assignment id="krkkcvqb">
+                        <title>No cal</title>
+                        <operation source="constant" to="output.op_text">Not valid Check</operation>
+                     </assignment>
+                     <link id="krkkcvpu" targetId="krkkcvpm" type="containerLink"/>
+                  </flow>
+                  <link id="krkkcvpp" targetId="krkkcvpq" type="containerLink">
+                     <condition source="formula">
+                        <function name="true">
+                           <arg name="field">{$input.in_check}</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="krkkcvpy" targetId="krkk6u5g"/>
+                  <link id="krkkcvps" targetId="krkkcvpt" type="containerLink">
+                     <condition source="formula">
+                        <function name="false">
+                           <arg name="field">{$input.in_check}</arg>
+                        </function>
+                     </condition>
+                  </link>
+               </container>
+               <end id="krkk6u5g">
+                  <title>End 1</title>
+               </end>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>4aikI7UGvYfhLKpCGAqEMn</types1:GUID>
+      <types1:DisplayName>p_Addition</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2021-08-02T07:16:53.793Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
